@@ -2,6 +2,13 @@
 layout: post
 title:  First Article!
 excerpt_separator:  <!--more-->
+categories:
+  - Linux
+tags:
+  - general
+  - code
+  - Linux
+  - bash
 ---
 
 Hello world, foo-bar!
