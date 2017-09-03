@@ -9,6 +9,7 @@ tags:
   - AD
   - Concept
 
+excerpt: Getting started with Samba, or Samba 101!
 excerpt_separator:  <!--more-->
 ---
 # Getting Started with Samaba! 
