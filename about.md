@@ -3,11 +3,11 @@ layout: page
 title: About
 sidebar_link: true
 ---
+<center>Hi there!</center>
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it
-  for your own use upon downloading. Carry on!
-</p>
+This is my personal website where I hope to compile and put out things that I find interesting, hoping that other people might find them interesting too!
 
-To make pages show up in the sidebar, add `sidebar_link: true` to the front
-matter.
+A `curious point to node` , if you are curious that is, why is this webiste called white-turtle ?
+Well, white turtles are cute ( in anime ) and I couldn't think of a better name, that wasn't already taken.
+
+
