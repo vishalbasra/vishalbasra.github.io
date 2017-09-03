@@ -2,7 +2,6 @@
 layout: post
 title:  First Article!
 excerpt: First post on this site!
-<br>
 excerpt_separator:  <!--more-->
 categories:
   - Linux

@@ -10,7 +10,6 @@ tags:
   - Concept
 
 excerpt: Getting started with Samba, or Samba 101!
-<br>
 excerpt_separator:  <!--more-->
 ---
 # Getting Started with Samaba! 
