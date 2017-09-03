@@ -15,11 +15,14 @@
     </a>
   {% endif %}
 
-  <a id="tags-link"
-     title="Tags" aria-label="Tags"
-     href="{{ site.baseurl }}"/tags.html>
-     {% include svg/tags.svg %}
-  </a>
+{% if tags_page %}
+    <a id="tags-link"
+       class="icon{% if page.url == '/tags' %} active{% endif %}"
+       title="Tags" aria-label="Tags"
+       href="{{ site.baseurl }}{{ tags_page.url }}">
+      {% include svg/tags.svg %}
+    </a>
+{% endif %}
 
   <a id="subscribe-link"
      class="icon" title="Subscribe" aria-label="Subscribe"
