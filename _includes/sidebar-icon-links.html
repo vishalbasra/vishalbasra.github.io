@@ -7,12 +7,6 @@
     </a>
   {% endif %}
 
-  <a id="subscribe-link"
-     class="icon" title="Subscribe" aria-label="Subscribe"
-     href="{{ site.baseurl }}/feed.xml">
-    {% include svg/feed.svg %}
-  </a>
-
   {% if site.linkedin.username %}
     <a id="linkedin-link"
        class="icon" title="Linkedin Link" aria-label="Linkedin"
@@ -20,6 +14,21 @@
       {% include svg/linkedin.svg %}
     </a>
   {% endif %}
+
+  {% if tags_page %}
+    <a id="tags-link"
+       class="icon{% if page.url == '/tags' %} active{% endif %}"
+       title="Tags" aria-label="Tags"
+       href="{{ site.baseurl }}{{ tags_page.url }}">
+      {% include svg/tags.svg %}
+    </a>
+  {% endif %}
+
+  <a id="subscribe-link"
+     class="icon" title="Subscribe" aria-label="Subscribe"
+     href="{{ site.baseurl }}/feed.xml">
+    {% include svg/feed.svg %}
+  </a>
 
   {% comment %}
     Check if we have tag or search pages page active before linking to it.
@@ -33,15 +42,6 @@
       {% assign search_page = node %}
     {% endif %}
   {% endfor %}
-
-  {% if tags_page %}
-    <a id="tags-link"
-       class="icon{% if page.url == '/tags' %} active{% endif %}"
-       title="Tags" aria-label="Tags"
-       href="{{ site.baseurl }}{{ tags_page.url }}">
-      {% include svg/tags.svg %}
-    </a>
-  {% endif %}
 
   {% if search_page %}
     <a id="search-link"
