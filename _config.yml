@@ -3,15 +3,15 @@ markdown:         kramdown
 highlighter:      rouge
 
 # Setup
-title:            Hydeout
-tagline:          'A Jekyll theme'
-description:      'The <a href="http://hyde.getpoole.com" target="_blank">Hyde</a> theme for <a href="http://jekyllrb.com" target="_blank">Jekyll</a>, refreshed.'
-url:              https://fongandrew.github.io/hydeout
+title:            white-turtle
+tagline:          'turtles and code!'
+description:      'Web-space of  <a href="https://twitter.com/vishalbasra" target="_blank">Vishal Basra!</a> '
+url:              https://vishalbasra.github.io/
 baseurl:          # the optional subpath of your site, e.g. "/blog"
 
 author:
-  name:           'Andrew Fong'
-  url:            https://twitter.com/fongandrewc
+  name:           'Vishal Basra'
+  url:            https://twitter.com/vishalbasra
 
 paginate:         5
 
@@ -24,4 +24,4 @@ plugins:
 version:            3.4.1
 sidebar_home_link:  true
 github:
-  repo:             https://github.com/fongandrew/hydeout
+#  repo:             https://github.com/fongandrew/hydeout
