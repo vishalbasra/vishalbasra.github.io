@@ -1,8 +1,6 @@
 ---
 layout: post
-title:  "First Article!"
-date:   2017-07-24 17:01:00 +0000
-author: Vishal Basra
+title:  First Article!
 excerpt_separator:  <!--more-->
 ---
 
