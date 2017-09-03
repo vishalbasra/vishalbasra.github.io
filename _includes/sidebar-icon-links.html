@@ -1,7 +1,7 @@
 <nav id="sidebar-icon-links">
   {% if site.github.address %}
     <a id="github-link"
-       class="icon" title="Github Project" aria-label="Github"
+       class="icon" title="Github Profile" aria-label="Github"
        href="{{ site.github.address }}">
       {% include svg/github.svg %}
     </a>
@@ -12,6 +12,14 @@
      href="{{ site.baseurl }}/feed.xml">
     {% include svg/feed.svg %}
   </a>
+
+  {% if site.linkedin.username %}
+    <a id="linkedin-link"
+       class="icon" title="Linkedin Link" aria-label="Linkedin"
+       href="{{ site.linkedin.username }}">
+      {% include svg/linkedin.svg %}
+    </a>
+  {% endif %}
 
   {% comment %}
     Check if we have tag or search pages page active before linking to it.

@@ -69,4 +69,3 @@ remote_shell $1 $2 rsyslog /sbin/rsyslogd Rsyslog /opt/somefolder/ssh_keys/myuse
 
 {% endhighlight %}
 
- Danke!
