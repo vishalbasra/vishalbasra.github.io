@@ -21,7 +21,4 @@ plugins:
   - jekyll-paginate
 
 # Custom vars
-version:            3.4.1
 sidebar_home_link:  true
-github:
-#  repo:             https://github.com/fongandrew/hydeout
