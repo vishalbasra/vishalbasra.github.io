@@ -17,15 +17,15 @@ excerpt_separator:  <!--more-->
 
 
 <br />I'm writing this post with the idea of how I first learned about samba, and I intend to write this post as a reference for me or for someone to read it and understand the key concepts.
-This is not going to be a details Step by Step Technical walkthrough, rather a post that'll work to understand the key concepts.
+This is not going to be a details step by step technical walkthrough, rather a post that'll work to help better understand the key concepts.
 
 But before we can delve into Samba and how it works, it's important to understand 
 
 ## The most shortest history of Windows Networking wrt this post
-<p>1. In 1985,</p> Microsoft didn't support TCP, so they made SMB or Server Message Block work over something called the `NetBIOS` protocol. <br />
+<p>1. In 1985,</p> Microsoft didn't support TCP, so they made `SMB` or `Server Message Block` work over something called the `NetBIOS` protocol. <br />
    The NetBIOS protocol was MS's solution at the time to do a couple of things ( more in detail later )
 
-It allowed 
+SMB allowed 
 
 - file sharing withing workgroups 
 - printer sharing within work groups 
@@ -36,9 +36,9 @@ It allowed
 The NetBIOS protocol was not routable and was intended for a bunch of machines on the same network.  
 Soon NetBIOS was encapsulated over TCP ( MS learned it) 
 
-<p>2. In 1987,</p> Microsoft learned to encapsulate NetBIOS traffic over TCP and called it  NBT - NetBIOS over TCP </p>
+<p>2. In 1987,</p> Microsoft learned to encapsulate NetBIOS traffic over TCP and called it  `NBT` - **NetBIOS over TCP**
 
-- Name resolution was done like (NetBIOS name -> IP address ) and this was handled by 
+- Name resolution was done like this (NetBIOS name -> IP address ) and it was handled like this - 
    - Lookups were handled in a `lmhosts` file , this is analagous to the `/etc/hosts` file 
    - Central name service called WINS 
    - Broadcasting 
@@ -46,7 +46,7 @@ Soon NetBIOS was encapsulated over TCP ( MS learned it)
 - Machines could register their NetBIOS name and IP address to WINS
 
 
-<p>3. In 1996,</p> SB continued to evolve and in 1996, it was rebranded as `CIFS` or `Common Internet File System`
+<p>3. In 1996,</p> SMB continued to evolve and in 1996, it was rebranded as `CIFS` or `Common Internet File System`
 
 - It ran directly over TCP / IP 
 - NetBIOS was not used anymore 
@@ -86,7 +86,7 @@ This is one of the roles - `Active Directory Domain Controller` that Samba is ab
   Samba does not rely on any other machine to store account info or the authentication and can do
   - File Server 
   - Print Server 
-  - WINS ( Almost absolute ) 
+  - WINS ( Almost obsolete ) 
 
 - For windows domains, samba can do
   - Domain Member Server 
@@ -150,7 +150,7 @@ A tool for administration of remote SMB/CIFS servers intended to resemble window
 - There's a web based tool called SWAT ; Samba Web Administration Tool ( no longer suported for Samba4 )
 
 
-## Installing Samba examples sample
+## Installing Samba sample
 
 Some distrubitions contain client side samba packages like winbind, samba common , samba client etc. 
 
@@ -178,18 +178,18 @@ Let's set it like this
 [global]
   netbios name = MAMBA-SERVER 
   security = user # this means that authentication will happen based on credentials that are locally stored on the server itself. 
-  name resolve order = wins bcast # this might not be absoulte necessary, but the course aythor deemed it to be so. 
+  name resolve order = wins bcast # this might not be absoulte necessary, but again this keeps with traditions
   # if this is given like this, then we have explicitly removed DNS
 
 
 [docs] # This is the name of the share 
-  comment = documentation # maybe this is called coment 
+  comment = documentation # maybe this is called comment 
   path = /usr/share/doc
   read only = yes 
   # or it can be called writable = no with the same effect 
 ```
 
-> The traditional NFS UNIX file sharing is different, in NFS the name which the clients see is exactly the path in the server but in Samba we can, like the share name is 'docs' but the path is different.
+> The traditional NFS UNIX file sharing is different, in NFS the name which the clients see is exactly the path in the server but in Samba we can choose a different name, like the share name is 'docs' but the path is different.
 
 
 - To test the syntax use testparam and simply run simply run 
@@ -215,7 +215,7 @@ Let's set it like this
 
 Try running `smbpasswd -a vader` then enter the SMB password for user vader to set the password for vader
 
-- To view the shares, use the smbclient program as `smbclient -L PLURAL-SERVER -U vader` the -L is list on the net-bios server name with the user vader.
+- To view the shares, use the smbclient program as `smbclient -L MAMBA-SERVER -U vader` the -L is list on the net-bios server name with the user vader.
 Then enter vader's password to see the share! 
 
 > We see the docs share which defined and also a share called IPC which is Inter Process Communication and is something Samba uses internally , also we see the server name and the workgroups
