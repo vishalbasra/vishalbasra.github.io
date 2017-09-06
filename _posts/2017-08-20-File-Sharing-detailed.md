@@ -11,13 +11,14 @@ tags:
 excerpt: Understanding File Shares in Samba!
 ---
 
-# What does this post entails?
+# What does this post entail ?
 
 ##  How user accounts are managed on the stand alone samba server ?
 
-  - This begs the question, what is a `stand-alone` server w.r.t Samba ?? 
-  > It's a server that doesn't depend on any other server to store user account infornmation or perform authentication and does both of these by itself thus storing things locally. This begs the question how can the account information be stored properlly, locally?
+  - This begs the question, what is a `stand-alone` server w.r.t Samba ?
+  > It's a server that doesn't depend on any other server to store user account infornmation or perform authentication and does both of these by itself thus storing things locally. This further begs the question (too much begging going on here) how can the account information be stored properlly, locally?
 
+Multiple ways to do that 
     - i.) The traditional storage location file is a flat file called  `/etc/samba/smbpasswd` , this is best regraded as obsolute and is analogous to the `/etc/passwd` flat file but is still supported
     - ii.) There is also `tdbsam` **Trivial DataBase SAM** , is bundled with Samba, is easy to use and requires no configuration to work 
     - iii.) There is also `ldapsam` uses an external directory service 
@@ -53,7 +54,7 @@ The `private` directory identified by `PRIVATE_DIR` is something that is compile
         - `security = user`  means it's a stand alone server, also this is a default setting 
         - `security = server`  samba will delegate authority to another CIFS server ; kind of obsolete 
         - `security = domain`  samba will authenticate via the NT doain controller 
-        - `security = ads` samba will authenticate using the Active Directory Domain Services  
+        - `security = ads` samba will authenticate using the Active Directory Domain Services ( probably the best way to implement it right now )
 
 
 
@@ -62,7 +63,7 @@ The `private` directory identified by `PRIVATE_DIR` is something that is compile
      - a '-a' means add, so if you do `smbpasswd -a vader` it'll fail because vader does not have a linux user ID account. Thus, In this way(stand-alone) samba requires the users to be existing as a linux UID first. 
 
   - To look at the `TDB` database file directly isn't possible because it's a binary file, but the file can be viewed with a program called `pdbedit` 
-    - Use it like this `pdbedit -Lw fred`
+    - Use it like this `pdbedit -Lw vader`
     - The format of the file is like`username:LinuxUID:LAN manager password hash: windows NT password hash: <some flags like U meanning a regular user account> : time of the user creation`
 
   - All this is controlled and managed in the `TDBSAM` database and that database's file is controlled by the 'PRIVATE_DIR' and to check that, run 
@@ -130,7 +131,7 @@ Here's how this works :-
   - i) Someone makes a call to connect to a samba share called 'alice' 
   - ii) Samba will check if there's already a share called 'alice' , if yes, it'll connect to it. 
   - ii). If not, samba will check to see if there is a `[homes]` section in smb.conf, if not the connection will fail. 
-  - iv) If yes, samba will check to see if there's a linux user account with the username 'alice', if yes, it'll check that if the password supplied while attempting a connection is the same as that in the linux /etc/passwd file(could be somewhere else also), if yes for both these questions, it will lookup's alice's home directory, make a share and connect.
+  - iv) If yes, samba will check to see if there's a linux user account with the username 'alice', if yes, it'll check that if the password supplied while attempting a connection is the same as that in the linux /etc/passwd file(could be somewhere else also these days), if yes for both these questions, it will lookup's alice's home directory, make a share and connect.
   - v) If not, it'll disconnect. 
 
 
@@ -222,7 +223,7 @@ For a full list, please see "*VARIBLE SUBSTITUTION*" in the official man page of
 ( Ofcourse you don't have to type the password, the OS will prompt you for it.) 
 
 ```
-mount -t cifs //Foo/bar /demo \ -o username =fred,password=mypassword
+mount -t cifs //Foo/bar /demo \ -o username =vader,password=mypassword
 ```
     - `//Foo/bar` is the `UNC name`    
     - `/demo` is the local mount point name
@@ -233,7 +234,7 @@ This in turn calls the `mount.cifs` function / program to do the actual work.
   - For all options, have a look at the man page for mount.cifs 
   - Eg, this can be done :- 
 ```
-mount -t cifs //Foo/bar /demo \ -o username =fred,password=mypassword,uid=vishal,gid=vishal,filemode=0644
+mount -t cifs //Foo/bar /demo \ -o username =vader,password=mypassword,uid=vishal,gid=vishal,filemode=0644
 ```
 
 Ofcourse saving the credentials or even using them from the command line is a rahter dumb, stuid thing to do.
@@ -248,7 +249,7 @@ password=iamyourfatherluke
 then do this :- 
 
 ```
-mount -t cifs //Foo/bar /demo \ -o credentials = /myfile,uid=vader,gid=vader,filemode=0644
+mount -t cifs //Foo/bar /demo \ -o credentials = /myfilename,uid=vader,gid=vader,filemode=0644
 ```
 
 This will also work and this entery can be made in the fstab file. 
