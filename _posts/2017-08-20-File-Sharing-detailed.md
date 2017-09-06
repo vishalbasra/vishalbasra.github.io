@@ -18,7 +18,7 @@ excerpt: Understanding File Shares in Samba!
   - This begs the question, what is a `stand-alone` server w.r.t Samba ?
   > It's a server that doesn't depend on any other server to store user account infornmation or perform authentication and does both of these by itself thus storing things locally. This further begs the question (too much begging going on here) how can the account information be stored properlly, locally?
 
-Multiple ways to do that 
+Multiple ways to do that <br>
     - i.) The traditional storage location file is a flat file called  `/etc/samba/smbpasswd` , this is best regraded as obsolute and is analogous to the `/etc/passwd` flat file but is still supported<br>
     - ii.) There is also `tdbsam` **Trivial DataBase SAM** , is bundled with Samba, is easy to use and requires no configuration to work<br>
     - iii.) There is also `ldapsam` uses an external directory service <br>
