@@ -1,4 +1,4 @@
-## This site and how it came to look like this
+<center>**This site and how it came to look like this**</center>
 
 I do not take full creative ownership for this site's theme / visual representations. 
 
