@@ -35,10 +35,10 @@ Winbind is the main protagonist of the linux AD story, but we need to understand
 ## NSS
   -  NSS `Name Service Switch` 
 
-      - In the standard linux library there are a set of routiines called resolvers because they answer queries. 
+      - In the most of the common standard linux libraries there are a set of routiines called resolvers because they answer queries. 
       - The one's we are interested in are of the likes `getpwent() and getpwam()`
       - These will lookup a user account by name and then get the userID, home directory etc. 
-      - These all consult a file called `/etc/sswitch.conf` and since these are the resolvers for user details, these all look for a directives called `passwd` mentioned like this :- `passwd: files nis winbind`
+      - These all consult a file called `/etc/nsswitch.conf` and since these are the resolvers for user details, these all look for a directives called `passwd` mentioned like this :- `passwd: files nis winbind` in the file
       - The names in the line above resolve directorly to library names, so 
         - `files` means that the `libnss_iles` library will be used which points to the file `/etc/passwd` 
         - `nis` means that the  `libnss_nis`  library will be used. `nis` used to be called yellow pages and might be thought of as a backend account information store 
@@ -54,7 +54,7 @@ Winbind is the main protagonist of the linux AD story, but we need to understand
     - i) login uses a library called `libpam`
     - ii) The `libpam` directory consorts to a configuration file at `/etc/pam.d/<program name>` eg like at `/etc/pam.d/login/`
     - iii) Under the control of the enteries that `libpam` finds in that file, `libpam` will assemble it's four modules which combined will allow authentication to work , these are 
-    - iv) Please note that the stacks of PAM modules are stored in `/lib64/security`
+ sted below   - iv) Please note that the stacks of PAM modules are stored in `/lib64/security`
 
      - These are 
        - `auth`
@@ -73,16 +73,16 @@ Winbind is the main protagonist of the linux AD story, but we need to understand
 
 ##  KerberOS 
 
-It's usually described as a 'trusted third party' authentication service. 
+It's usually described as a **'trusted third party'** authentication service. 
 Though 'Kerberos' is a highly vast subject and there can be a proper complete course on the subject.
 
-- Goal is to provide 'Single Sign On' by providing a way for the client and a server (known as `principles` in kerberos lingo) to securely authenticate one to the other. 
+- Goal is to provide **'Single Sign On'** by providing a way for the client and a server (known as `principles` in kerberos lingo) to securely authenticate one to the other. 
    This is made possible by the use and exchange of `encrypted tickets` 
 - This technology originiated in 1980 from MIT as a part of Project Athena 
 - it was adopted by MS for authentication in Windows 2000 and has been used ever since. 
-- Why is it called kerberos, well kerberos was the name of the `Three headed dog` that guarded the entrance to the *Chanmer of Hades*
+- Why is it called kerberos, well kerberos was the name of the `Three headed dog` that guarded the entrance to the *Chamber of Hades*
 - The user ( client which needs to do SSO )
-- Kerberos Distribution Center (KDC) which performs two services 
+- Kerberos Distribution Center (`KDC`) which performs two services 
     - i)  Authentication Service 
     - ii) Ticket Granting Service 
 
@@ -94,7 +94,7 @@ or the **Kerberos Authentication Process**
 2) The `Ticket Granting Service` or `TGT` in the `KDC` will respond with a `TGT` or a `Ticket Granting Ticket`<br />
 3) Some time later, user wants to access some application 
    In the background, her client machine will issue a `Request Service Ticket` for that service. 
-   Included in `RST` will be a copy of `TGT` as a proof of entitelment to the `SGT`<br />
+   Included in `RST` will be a copy of `TGT` as a proof of entitelment to the `SGT` or `Service Granting Ticket`<br />
 4) Kerberos will send a `Service Ticket` for the application <br />
 5) The client will then present the `Service Ticket` to the application server and demand service, the Application will authorise the client and grant the service. <br />
 
@@ -158,7 +158,7 @@ Configuration options for winbind are in `smb.conf` and some of the useful ones 
 
 - Change the resolver nameserver and the search domain to the AD server! 
 
-- Check the linux system clock, becaseu kerberos uses the timestamp as a part of it's protocol and if the clock on the client / server is too skewed then kerberos will fail 
+- Check the linux system clock, because kerberos uses the timestamp as a part of it's protocol and if the clock on the client / server is too skewed then kerberos will fail 
 
   So ensure that the date, time are running fine, try starting the `NTPD` daemon! 
 
@@ -187,13 +187,13 @@ VADER.LOCAL = {
 ```
 
 - Post this you'll be able to get a `Request TGT` and you can check by ( kinit also has a -v verbrose option ) 
-`knit Administrator@VADER.LOCAL` 
-The Administrator is an account on the DC on the domain 
+`knit Administrator@VADER.LOCAL`<br> 
+The Administrator is an admin level account on the DC on the domain 
 
 - No error messages or no messages means `TGT` was sucessfully received 
 
 - To see all tickets, check using `klist` ; each ticket will have a principal , user , validity , expiration , service principal etc. 
-Ypu might see `krbtgt` as the Service Pricipal in kinit which means that the ticket was gotten by the Kerberos Ticket granting ticket service 
+You might see `krbtgt` as the Service Pricipal in kinit which means that the ticket was gotten by the Kerberos Ticket granting ticket service 
 
 
 <p>2. Configure Samba </p>
@@ -235,14 +235,15 @@ ii. Join the domain with an account who has the provilage to join the domain!
   - `wbinfo -u` will show local users and also the AD users 
   - `wbinfo -g` will only list groups in AD 
 
-- To verify that winbind is working for user authentication  `wbinfo -a username` # the a stands for authenticate and the username is a user in AD
+- To verify that winbind is working for user authentication  `wbinfo -a username` <br>
+The `a` stands for authenticate and the username is a user in AD
 - It'll ask the password twice and then check the challenge / response. 
 
 
 <p>4. Now we need to let PAM know about winbind</p>
 
 - Ofcourse this can be achieved manually by editing the PAM config files, but here's a little tool called `authconfig`
-- But if you messup PAM, you could lock yourself out! ( and it's very easy to do so even if you aren't so stupid ) so keep a login session alive as root from somewhere 
+- But if you messup PAM, you could lock yourself out! ( and it's very easy to do so even if you aren't stupid like me! ) so keep a login session alive as root from somewhere 
 - Define user Information ( where it will come from ) 
 - Define Authentication ( winbind and local ) 
 - This will change `/etc/pam.d/system-auth` and under the auth module lots of things will change eg, will contain `pam_winbind.so` and `pam_unix.so` will be used 
