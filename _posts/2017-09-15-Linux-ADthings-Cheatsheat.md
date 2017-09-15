@@ -36,8 +36,8 @@ excerpt: Cheat-sheat for linux AD stuff - Samba / winbind / etc.
 | `net ads lookup`      | information about the domain-controller - forest , nearest **KDC** - `KerberOS Key Distribution Center`, etc. |
 | `getent passwd "<DOMAINNAME>\<username>"`      | Get OS level information about the AD user. Note that the DOMAIN NAMe should be in **upper-case**  |
 | `id <user>`      | Query / verify id of a user.  |
-| `group <user>`      | Query / verify group of AD user.  |
+| `group <user>`      | Query or verify group of AD user.  |
 | ` wbinfo -p`      | Pings winbind to see if winbind is running  |
-| `wbinfo -u`      | Pings / lists all the AD users. |
-| `wbinfo -g`      | Pings / lists all the AD groups. |
+| `wbinfo -u`      | Pings or lists all the AD users. |
+| `wbinfo -g`      | Pings or lists all the AD groups. |
 
