@@ -14,9 +14,12 @@ tags:
 excerpt: Cheat-sheat for linux AD stuff - Samba / winbind / etc.
 ---
 
+**This list is in now way a complete list of all things that can be done with these tools, but I find it useful from time to time**
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
+
+
+| Command        | Explanation  |
+| ------------- |:-------------:|
+| col 3 is      | right-`aligned` |
 
 
