@@ -28,7 +28,7 @@ excerpt: Cheat-sheat for linux AD stuff - Samba / winbind / etc.
 | `klist -d `      | List of KerberOS tickets with `type`.  |
 | `klist`      |  List of kerberOS tickets with `encryption`. |
 | `net ads leave -U <administrator>`      | Leave the joined Domain |
-| `net ads join -S <ad_dc_server> -U <administrator>`      |  The **-S** option is optional and we can join a domain even without specifying the DCT server | DC specified in `/etc/samba/smb.conf` |
+| `net ads join -S <ad_dc_server> -U <administrator>`      |  The **-S** option is optional and we can join a domain even without specifying the DCT server which may be specified in `/etc/samba/smb.con` |
 | `net ads test join`      | Tests to see if the AD join is sucessful. |
 | `net ads dns register -P`      | Register the DNS in-case the DNS registration at the time of domain joining didn't work correctly. |
 | `net ads info`      | Information about the domain and domain controller {default LDAP port is **389**} |
