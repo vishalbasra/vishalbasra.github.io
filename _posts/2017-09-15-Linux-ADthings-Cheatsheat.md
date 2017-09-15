@@ -10,6 +10,7 @@ tags:
   - Samba
   - AD
   - Concept
+  - Cheat-sheet
 
 excerpt: Cheat-sheat for linux AD stuff - Samba / winbind / etc.
 ---
@@ -20,6 +21,6 @@ excerpt: Cheat-sheat for linux AD stuff - Samba / winbind / etc.
 
 | Command        | Explanation  |
 | ------------- |:-------------:|
-| col 3 is      | right-`aligned` |
+| `kinit`      | Asks for the password for the default administrator account and proceeds to get a `Kinit` ticket ; doesn't return a response if no error. |
 
 
