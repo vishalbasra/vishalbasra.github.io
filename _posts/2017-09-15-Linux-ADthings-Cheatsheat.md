@@ -37,3 +37,8 @@ excerpt: Cheat-sheat for linux AD stuff - Samba / winbind / etc.
 | `getent passwd "<DOMAINNAME>\<username>"`      | Get OS level information about the AD user. Note that the DOMAIN NAME should be in **upper-case**  |
 | `id <user>`      | Query or verify id of a user.  |
 | `group <user>`      | Query or verify the group of AD user.  |
+| `wbinfo -p`      | Pings winbind to see if winbind is running  |
+| `wbinfo -u`      | Lists all the AD users. |
+| `wbinfo -g`      | Lists all the AD groups. |
+| `wbinfo -i <ad_user>`      | Gets userID , primary group ID , users home directory , loginshell , fullname |
+| `wbinfo -a <user>%<passowrd>`      | Will test to see plaintext password authentication and see if the user authentication will work. |
