@@ -42,3 +42,8 @@ excerpt: Cheat-sheat for linux AD stuff - Samba / winbind / etc.
 | `wbinfo -g`      | Lists all the AD groups. |
 | `wbinfo -i <ad_user>`      | Gets userID , primary group ID , users home directory , loginshell , fullname |
 | `wbinfo -a <user>%<passowrd>`      | Will test to see plaintext password authentication and see if the user authentication will work. |
+| `wbinfo -t`      | Verifies if linux server account was created when the samba server was added to the windows AD is working ; checks **trust info** for the domain  |
+| `wbinfo -r <username>`      | Shows unix group IDs to which the user belongs  |
+| `systemctl stop <winbind|smb|nmb>`      | Does what it says it does! |
+| `net cache flush`      | Flush winbind's cache |
+| `/var/lib/samba/*.tdb`      | Good fedault file's to know |
