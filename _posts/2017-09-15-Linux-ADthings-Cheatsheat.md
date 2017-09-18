@@ -46,4 +46,4 @@ excerpt: Cheat-sheat for linux AD stuff - Samba / winbind / etc.
 | `wbinfo -r <username>`      | Shows unix group IDs to which the user belongs  |
 | `systemctl stop <winbind|smb|nmb>`      | Does what it says it does! |
 | `net cache flush`      | Flush winbind's cache |
-| `/var/lib/samba/*.tdb`      | Good fedault file's to know |
+| `/var/lib/samba/*.tdb`      | Good default file's to know |
