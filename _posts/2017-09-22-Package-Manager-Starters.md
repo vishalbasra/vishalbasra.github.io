@@ -30,6 +30,7 @@ This page is by no means complete and isn't intended to be a tutorial, for a com
 | `rpm -q --changelog package_name`      | Queries the package and lists the changelog, this is pretty verbose, you might want to pipe a **head** or **tai** to it. |
 | `rpm -qi package_name`      | This will query the package and list it's information ; kinda similar to `yum info` |
 
+If there's an issue with RPM/YUM as in the Database is corrupt, delete/move the files in `/var/lib/rpm/*__db.*` and rebuild `yum clean all` or `rpm -v --rebuilddb`
 
 # Yum 
 
