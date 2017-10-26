@@ -1,14 +1,13 @@
 ---
 layout: post
 title:  "Chef Glosarry"
-categories: Linux
+categories: Chef
 
 categories:
   - Chef
 tags:
   - Chef
   - Configuration Management
-  - 101
   - Glossary
 
 excerpt: Commonly used terms / glossary for Chef
