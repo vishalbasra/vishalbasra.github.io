@@ -36,6 +36,3 @@ If there's an issue with RPM/YUM as in the Database is corrupt, delete/move the 
 
 **A nice explanation for the name here**
 
-| Command    |
-
-
