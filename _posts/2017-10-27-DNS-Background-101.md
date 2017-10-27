@@ -103,7 +103,7 @@ Consider something that is familiar, the **unix system** , how is it designed? A
 
 
 
-# The difference is that the structure of writing names in the `Unix Filesystem` and the `Domain Name System` is different, i.e inverted, imagine having to do `.org.somesite.awesome` that could work too, but it kinda seems un-natural (perhaps because I'm used to it for DNS now?)  The idea in it's essence remains the same though.
+###### The difference is that the structure of writing names in the `Unix Filesystem` and the `Domain Name System` is different, i.e inverted, imagine having to do `.org.somesite.awesome` that could work too, but it kinda seems un-natural (perhaps because I'm used to it for DNS now?)  The idea in it's essence remains the same though.
 
 
 > The domain name system is designed just like the unix file-system, only that how it writes the path is inverted.
