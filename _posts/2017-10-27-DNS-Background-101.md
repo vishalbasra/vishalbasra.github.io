@@ -32,7 +32,7 @@ A History of DNS
 
 - In 1970's  ARPAnet was a community of a few hundred hosts and had a single file called **HOSTS.TXT** was maintained which contained name-to-address mapping for each host connected to the ARPAnet.
 - The unix `/etc/hosts` file was compiled from this **HOSTS.TXT** file ( by removing feilds that unix didn't need
-- Now the **HOSTS.TXT** file was maintained by <a href="https://www.sri.com/">SRI</a>-NIC ( you may also want to see <a href="https://www.sri.com/work/timeline-innovation/timeline.php?timeline=computing-digital#!&innovation=domain-names-network-information-center">Timeline on SRI</a> and <a href="https://www.sri.com/about/timeline/tld-nic">SRI's Role in managing NIC</a>
+- Now the **HOSTS.TXT** file was maintained by [SRI](https://www.sri.com/)-NIC ( you may also want to see [Timeline on SRI](www.sri.com/work/timeline-innovation/timeline.php?timeline=computing-digital#!&innovation=domain-names-network-information-center) and [SRI's Role in managing NIC](https://www.sri.com/about/timeline/tld-nic)
 - `ARPANET` administrators would email changes to the NIC(the SRI-NIC is also referred to just NIC at this time) with changes in the **HOSTS.TXT** 
 - Or they would `FTP` into the SRI-NIC, grab the current **HOSTS.TXT** file and make changes.
 - A new **HOSTS.TXT** file would then be compiled once or twice a week or at an even slower pace.
