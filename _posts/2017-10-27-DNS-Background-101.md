@@ -40,7 +40,7 @@ A History of DNS
 
 Now obviously there are apparent problems to this today that we can comprehend but at that point of time, the scale of rise of the Internet (ARPAnet at the time) was completely un-precendeted.
 
-As the number of hosts in ARPAnet grew, changes to the **HOSTS.TXT** file also grew propotionately. This not just meant frequent updates in a file which was un-managable, but also `traffic` to the NIC increased dramatically.
+As the number of hosts in ARPAnet grew, changes to the **HOSTS.TXT** file also grew propotionately. This not just meant frequent updates in a file which was un-managable, but also that traffic to the NIC increased dramatically.
 
 
 This problem kind of escalated into a whole dimensiton when ARPAnet moved to `TCP/IP` thus the population of the network exploded 
@@ -103,7 +103,7 @@ Consider something that is familiar, the **unix system** , how is it designed? A
 
 
 
-### The difference is that the structure of writing names in the `Unix Filesystem` and the `Domain Name System` is different, i.e inverted, imagine having to do `.org.somesite.awesome` that could work too, but it kinda seems un-natural (perhaps because I'm used to it for DNS now?)  The idea in it's essence remains the same though.
+# The difference is that the structure of writing names in the `Unix Filesystem` and the `Domain Name System` is different, i.e inverted, imagine having to do `.org.somesite.awesome` that could work too, but it kinda seems un-natural (perhaps because I'm used to it for DNS now?)  The idea in it's essence remains the same though.
 
 
 > The domain name system is designed just like the unix file-system, only that how it writes the path is inverted.
