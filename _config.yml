@@ -20,8 +20,6 @@ plugins:
   - jekyll-gist
   - jekyll-paginate
 
-gems: [jekyll_github_sample]
-
 # Custom vars
 sidebar_home_link:  true
 github:
