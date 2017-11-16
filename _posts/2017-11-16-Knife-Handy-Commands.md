@@ -16,7 +16,9 @@ What is knife?
 
 **[Knife](https://docs.chef.io/knife.html)** is what let's us talk to the Chef server.
 
-## Knife Handy Commands!
+## Knife Handy Commands
+
+
 | Acronym        | Explanation  |
 | ------------- |:-------------:|
 | `knife node list`      | Show all nodes |
