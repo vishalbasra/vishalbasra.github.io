@@ -29,3 +29,4 @@ What is knife?
 | `knife search 'os:windows AND name:*.awesomehost.com* AND !region:production' -a "my.attribute"`      | Seach with a query and attributes |
 | `knife winrm --winrm-user 'domain\username' 'hostname:host-001.awesomehost.com' 'net statistics server'`      | Knife `WINRM` example |
 | ` knife ssh 'hostname:host-002.awesomehost.com' 'hostname'`      | Knife SSH example 1  |
+| `knife ssh --ssh-password <plaintext> 'id:01 AND os:linux AND name:*host-*' 'cat /proc/sys/vm/swappiness'`      | Knife SSH example 2 |
