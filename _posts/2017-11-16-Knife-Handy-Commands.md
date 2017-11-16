@@ -34,18 +34,3 @@ What is knife?
 | `knife environment compare dev staging`      | Compare two environments |
 | `knife search node "chef_environment:awesome-env AND os:linux" -i`      | See all nodes in your env |
 
-
-
-
-## See Run-Lists of multiple nodes ## 
-{: id="runlists"}
-
-This can be used to 
-- see order of cookbooks on the nodes
-- other interesting stuff on the run-lsit itself of the node!
-
-| S.No        | Action  | Command  |
-| 1.     | Get list of nodes you want to query on |    `knife search node "chef_environment:testing" -i > node-list.txt`   | 
-| 2.     | Make a directory |    `mkdir run-lists`   | 
-| 2.     | Save the run-lists of nodes you want to query on |    `for i in `cat node_todo.txt` ; do knife node show -F json $i > run-lists/$i.json ; done`   |
-| 3.     | Do `bash` magic eg; to see order of cookbooks linux and windows after `cd run-lists` |    `for i in `ls -l | grep -v './'   | awk '{ print $9 }'` ; do echo $i && grep -ni 'linux-base' $i && grep -ni 'vormetric' $i ; done > /tmp/order.txt`   |
