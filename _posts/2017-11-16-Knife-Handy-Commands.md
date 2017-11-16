@@ -18,5 +18,6 @@ What is knife?
 
 ## Knife Handy Commands!
 | Acronym        | Explanation  |
+| ------------- |:-------------:|
 | `knife node list`      | Show all nodes |
 | `knife node show <nodename>`      | Show the details of the node-name |
