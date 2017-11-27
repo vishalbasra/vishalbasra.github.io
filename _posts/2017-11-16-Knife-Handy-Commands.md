@@ -21,6 +21,7 @@ What is knife?
 
 | Acronym        | Explanation  |
 | ------------- |:-------------:|
+| `knife <command> --help`      | List out any help eg: `knife node --help` |
 | `knife node list`      | Show all nodes |
 | `knife --version`      | Show the version, lol |
 | `knife cookbook create <bla>`      | Makes a Cookbook |
