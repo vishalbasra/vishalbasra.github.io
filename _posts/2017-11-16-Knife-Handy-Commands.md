@@ -44,7 +44,7 @@ What is knife?
 | `knife status 'env:production AND name:*awesome*` -r`      | See nodes in search query with last chef-runs and the run-list |
 | `knife configure client`      | Configure  `client.rb` |
 | `knife configure`      | Configure  `knife.rb` |
-| `knife bootstrap <nodename> -x <username> -P <password> -N <nodeName>`      | Bootstrap Bootstrap! |
+| `knife bootstrap <nodename> -x <username> -P <password> -N <nodeName>`      | Bootstrap Bootstrap |
 
 ## See Run-Lists of multiple nodes ##
 {: id="runlists"}
