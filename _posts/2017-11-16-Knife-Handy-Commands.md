@@ -22,6 +22,7 @@ What is knife?
 | Acronym        | Explanation  |
 | ------------- |:-------------:|
 | `knife node list`      | Show all nodes |
+| `knife client list`      | Show all clients.[Also see Clients vs Nodes](#clients-nodes) |
 | `knife node show <nodename>`      | Show the details of the node-name |
 | `knife node edit <nodename>`      | Edit the node9object) - edit the runlist |
 | `knife search node 'recipes:cookbook_name\:\:recipe_name’`      | Show nodes which have the `recipe` of the `cookbook` attached |
@@ -51,3 +52,16 @@ This can be used to
 | 2.     | Save the run-lists of nodes you want to query on |    `for i in `cat node_todo.txt` ; do knife node show -F json $i > run-lists/$i.json ; done`   |
 | 3.     | Do `bash` magic eg; to see order of cookbooks linux and windows after `cd run-lists` |    `for i in `ls -l \| grep -v './'   \| awk '{ print $9 }'` ; do echo $i && grep -ni 'linux' $i && grep -ni 'windows' $i ; done > /tmp/order.txt`   |
 
+
+## Client VS Node ##
+{: id="clients-nodes"}
+
+A `client` -  is a user that will authenticate against the Chef server to do something
+A `node`   -  is a machine that uses data from the Chef server to configure itself.
+
+
+A `client` will have the level of permission to access data from the Chef server
+A `node` will get the list of recipies / cookbooks to be run
+
+ 
+Consider a webserver `web1.awesomehost.com` , when it connects to chef-server to get all the recipies needed for `web1.awesomehost.com` it says "Hello Chef Server, I am client `web1.awesomehost.com` and here, I can authenticate to you, I need the `recipies` / `run-list` / `node-object` etc. for the `node` `web1.awesomehost.com` please pass them along.
