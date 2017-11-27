@@ -36,7 +36,7 @@ What is knife?
 | `knife ssh 'hostname:host-002.awesomehost.com' 'hostname'`      | Knife SSH example 1  |
 | `knife ssh --ssh-password <plaintext> 'id:01 AND os:linux AND name:host-002.awesomehost.com' 'cat /proc/sys/vm/swappiness'`      | Knife SSH example 2 |
 | See the link     | [Run-List for multiple nodes](#runlists) |
-| `knife data bag list databag-ssl-certificates`      | See stuff in `databag-ssl-certificates` |
+| `knife data bag list databag-ssl-certificates`      | See stuff in `databag-ssl-certificates`  |
 | `knife data bag show databag-ssl-certificates`      | Show stuff in `databag-ssl-certificates` |
 | `knife data bag show databag-ssl-certificates Awesomehost-RootCA`      | See stuff further down in a databagg `databag-ssl-certificates` |
 | `knife environment compare dev staging`      | Compare two environments |
