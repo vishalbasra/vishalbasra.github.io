@@ -49,7 +49,8 @@ What is knife?
 | `knife cookbook create <cookbookName>`      | Create a cookbook |
 | `knife cookbook list`      | List all the cookbooks |
 | `knife cookbook delete <cookbookName>`      | Delete a cookbook |
-| `knife_bootstrap`      | Bootstrap options |
+| `knife bootstrap <whatever options>`      | Bootstrap options |
+| `knife cookbook site <whatever options>`      | Cookbook options via/for the supermarket |
 
 
 
