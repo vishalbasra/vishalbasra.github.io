@@ -45,6 +45,9 @@ What is knife?
 | `knife configure client`      | Configure  `client.rb` |
 | `knife configure`      | Configure  `knife.rb` |
 | `knife bootstrap <nodename> -x <username> -P <password> -N <nodeName>`      | Bootstrap Bootstrap |
+| `knife cookbook create <cookbookName>`      | Create a cookbook |
+| `knife cookbook list`      | List all the cookbooks |
+| `knife cookbook delete <cookbookName>`      | Delete a cookbook |
 
 
 
