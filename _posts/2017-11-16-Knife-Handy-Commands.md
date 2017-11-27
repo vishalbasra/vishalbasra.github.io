@@ -43,6 +43,9 @@ What is knife?
 | `knife search node "chef_environment:awesome-env AND os:linux" -i`      | See all nodes in your env |
 | `knife status 'env:production AND name:*awesome*' -r`      | See nodes in search query with last chef-runs and the run-list |
 | `knife configure client`      | Configure  `client.rb` |
+| `knife configure`      | Configure  `knife.rb` |
+| `knife bootstrap <nodename> -x <username> -P <password> -N <nodeName>`      | Bootstrap Bootstrap |
+
 
 
 
