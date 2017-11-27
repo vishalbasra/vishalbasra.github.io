@@ -22,6 +22,10 @@ What is knife?
 | Acronym        | Explanation  |
 | ------------- |:-------------:|
 | `knife node list`      | Show all nodes |
+| `knife --version`      | Show the version, lol |
+| `knife cookbook create <bla>`      | Makes a Cookbook |
+| `knife node run_list add web1.awesomehost.com "receipe[apache]"`      | Makes to run list |
+| `knife node run_list remove web1.awesomehost.com "receipe[apache]"`      | Removes from run list |
 | `knife client list`      | Show all clients.[Also see Clients vs Nodes](#clients-nodes) |
 | `knife node show <nodename>`      | Show the details of the node-name |
 | `knife node edit <nodename>`      | Edit the node9object) - edit the runlist |
@@ -38,6 +42,8 @@ What is knife?
 | `knife environment compare dev staging`      | Compare two environments |
 | `knife search node "chef_environment:awesome-env AND os:linux" -i`      | See all nodes in your env |
 | `knife status 'env:production AND name:*awesome*` -r`      | See nodes in search query with last chef-runs and the run-list|
+| `knife configure client`      | Configure  `client.rb` |
+| `knife configure`      | Configure  `knife.rb` |
 
 ## See Run-Lists of multiple nodes ##
 {: id="runlists"}
