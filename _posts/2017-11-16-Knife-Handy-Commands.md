@@ -40,6 +40,9 @@ What is knife?
 | `knife data bag show databag-ssl-certificates`      | Show stuff in `databag-ssl-certificates` |
 | `knife data bag show databag-ssl-certificates Awesomehost-RootCA`      | See stuff further down in a databagg `databag-ssl-certificates` |
 | `knife environment compare dev staging`      | Compare two environments |
+| `knife search node "chef_environment:awesome-env AND os:linux" -i`      | See all nodes in your env |
+| `knife status 'env:production AND name:*awesome*' -r`      | See nodes in search query with last chef-runs and the run-list |
+| `knife configure client`      | Configure  `client.rb` |
 
 
 
