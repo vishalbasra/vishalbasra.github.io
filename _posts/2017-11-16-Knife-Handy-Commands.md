@@ -30,7 +30,7 @@ What is knife?
 | `knife client list`      | Show all clients.[Also see Clients vs Nodes](#clients-nodes) |
 | `knife node show <nodename>`      | Show the details of the node-name |
 | `knife node edit <nodename>`      | Edit the node9object) - edit the runlist |
-| `knife search node 'recipes:cookbook_name\:\:recipe_name’`      | Show nodes which have the `recipe` of the `cookbook` attached |
+| `knife search node 'recipes:cookbook_name\:\:recipe_name'`      | Show nodes which have the `recipe` of the `cookbook` attached |
 | `knife search <query> -a <attribute name>`      | Seach for nodes with the attribute name |
 | `knife search 'os:windows AND name:*.awesomehost.com* AND !region:production' -a "my.attribute"`      | Seach with a query and attributes |
 | `knife winrm --winrm-user 'domain\username' 'hostname:host-001.awesomehost.com' 'net statistics server'`      | Knife `WINRM` example |
