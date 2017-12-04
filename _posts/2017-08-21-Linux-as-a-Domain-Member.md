@@ -187,7 +187,7 @@ VADER.LOCAL = {
 ```
 
 - Post this you'll be able to get a `Request TGT` and you can check by ( kinit also has a -v verbrose option ) 
-`knit Administrator@VADER.LOCAL`<br> 
+`kinit Administrator@VADER.LOCAL`<br> 
 The Administrator is an admin level account on the DC on the domain 
 
 - No error messages or no messages means `TGT` was sucessfully received 
