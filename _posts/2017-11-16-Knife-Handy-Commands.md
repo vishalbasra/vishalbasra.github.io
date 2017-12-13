@@ -52,7 +52,7 @@ What is knife?
 | `knife cookbook delete <cookbookName>`      | Delete a cookbook |
 | `knife bootstrap <whatever options>`      | Bootstrap options |
 | `knife cookbook site <whatever options>`      | Cookbook options via/for the supermarket |
-| `knife search node 'name:awesomehost-01 AND virtualization.system:vmware`      | Search nested attributes within the actual search query |
+| `knife search node 'name:awesomehost-01 AND virtualization_system:vmware`      | Search nested attributes within the actual search query |
 
 
 
