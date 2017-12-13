@@ -77,7 +77,7 @@ This can be used to
 - Update the run-lists any subset of nodes 
 - I'm only appending a cookbook to the end of the run-list but this can be modified a custom use-case
 | S.No        | Action  | Command  |
-| 1.     | Get list of nodes you want to perform the action on |    `knife search node "chef_environment:testing" -i > node-list.txt` or `knife node list | grep 'mynode' > node-list.txt`   |
+| 1.     | Get list of nodes you want to perform the action on |    `knife search node "chef_environment:testing" -i > node-list.txt` or `grep` from `knife node list`   |
 | 2.     | Add your cookbook to the run-list for all |    `for i in $(cat /tmp/node-list.txt); do knife node run_list add $i 'recipe[box-xmtool]' ; done`   |
 
 
