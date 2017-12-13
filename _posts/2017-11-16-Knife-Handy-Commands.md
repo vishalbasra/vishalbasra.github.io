@@ -29,6 +29,7 @@ What is knife?
 | `knife node run_list remove web1.awesomehost.com "receipe[apache]"`      | Removes from run list |
 | `knife client list`      | Show all clients.[Also see Clients vs Nodes](#clients-nodes) |
 | `knife node show <nodename>`      | Show the details of the node-name |
+| `knife node show -l -F json <nodename>`      | Show the all details, including Attributes in JSON |
 | `knife node edit <nodename>`      | Edit the node9object) - edit the runlist |
 | `knife search node 'recipes:cookbook_name\:\:recipe_name'`      | Show nodes which have the `recipe` of the `cookbook` attached |
 | `knife search <query> -a <attribute name>`      | Seach for nodes with the attribute name |
@@ -51,6 +52,7 @@ What is knife?
 | `knife cookbook delete <cookbookName>`      | Delete a cookbook |
 | `knife bootstrap <whatever options>`      | Bootstrap options |
 | `knife cookbook site <whatever options>`      | Cookbook options via/for the supermarket |
+| `knife search node 'name:awesomehost-01 AND virtualization.system:vmware`      | Search nested attributes within the actual search query |
 
 
 
@@ -66,8 +68,19 @@ This can be used to
 | S.No        | Action  | Command  |
 | 1.     | Get list of nodes you want to query on |    `knife search node "chef_environment:testing" -i > node-list.txt`   |
 | 2.     | Make a directory |    `mkdir run-lists`   |
-| 2.     | Save the run-lists of nodes you want to query on |    `for i in `cat node_todo.txt` ; do knife node show -F json $i > run-lists/$i.json ; done`   |
+| 2.     | Save the run-lists of nodes you want to query on |    `for i in `cat node-list.txt` ; do knife node show -F json $i > run-lists/$i.json ; done`   |
 | 3.     | Do `bash` magic eg; to see order of cookbooks linux and windows after `cd run-lists` |    `for i in `ls -l \| grep -v './'   \| awk '{ print $9 }'` ; do echo $i && grep -ni 'linux' $i && grep -ni 'windows' $i ; done > /tmp/order.txt`   |
+
+## Update run-lists of multiple nodes ##
+
+This can be used to 
+- Update the run-lists any subset of nodes 
+- I'm only appending a cookbook to the end of the run-list but this can be modified a custom use-case
+| S.No        | Action  | Command  |
+| 1.     | Get list of nodes you want to perform the action on |    `knife search node "chef_environment:testing" -i > node-list.txt` or `knife node list | grep 'mynode' > node-list.txt`   |
+| 2.     | Add your cookbook to the run-list for all |    `for i in $(cat /tmp/node-list.txt); do knife node run_list add $i 'recipe[box-xmtool]' ; done`   |
+
+
 
 
 ## Client VS Node ##
