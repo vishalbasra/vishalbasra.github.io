@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Interact with Routen 53"
+title:  "Interact with Route 53"
 categories: DNS
 
 categories:
