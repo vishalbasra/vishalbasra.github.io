@@ -17,7 +17,7 @@ excerpt: Roll back RHEL / Centos systems!
 
 # I love awesome scenarios wherein one needs to roll-back the kernel
 
-Who doesn't love the [kenrel](https://www.kernel.org/)!
+Who doesn't love the [kernel](https://www.kernel.org/)!
 
 
 But there are um,cases when you need to revert an awesome update or perhaps the update didn't go well!
@@ -31,7 +31,7 @@ Ideally, everyone should also be getting free cake.
 We have our old friend [GRUB](https://www.gnu.org/software/grub/)
 
 
-> THere are multiple ways to achieve this, many of which may be more 'effecient'. This article is meant to show-case only one of the ways to do it, which I find easy to do.
+> There are multiple ways to achieve this, many of which may be more 'effecient'. This article is meant to show-case only one of the ways to do it, which I find easy to do.
 
 ## RHEL 6 / Centos 6 
 
@@ -73,7 +73,6 @@ See also [GRUB 2 Shotgun](https://wiki.gentoo.org/wiki/GRUB2_Quick_Start)
 Alternatively `rpm -qa | grep -i kernel`
 
 2. See current version to which you boot to `grub2-editenv list` 
-
 There will be numbers associated with the different kernerl versions, you'll want to leverage those out.
 
 3. Change the default kernel `grub2-set-default NUM` like `grub2-set-default 4`
