@@ -53,6 +53,7 @@ What is knife?
 | `knife bootstrap <whatever options>`      | Bootstrap options |
 | `knife cookbook site <whatever options>`      | Cookbook options via/for the supermarket |
 | `knife search node 'name:awesomehost-01 AND virtualization_system:vmware`      | Search nested attributes within the actual search query |
+| `knife data bag from file idname.json --secret-file encrypted_data_bag_secret`      | Create databag or databag item from file and encrypt it |
 
 
 
@@ -73,8 +74,8 @@ This can be used to
 
 ## Update run-lists of multiple nodes ##
 
-This can be used to 
-- Update the run-lists any subset of nodes 
+This can be used to
+- Update the run-lists any subset of nodes
 - I'm only appending a cookbook to the end of the run-list but this can be modified a custom use-case
 - Get list of nodes you want to perform the action on - `knife search node "chef_environment:testing" -i > node-list.txt` or `grep` from `knife node list | grep 'myname' > /node-list.txt`
 - Add your cookbook to the run-list for all - `for i in $(cat /tmp/node-list.txt); do knife node run_list add $i 'recipe[my-code]' ; done`
@@ -92,5 +93,5 @@ A `node`   -  is a machine that uses data from the Chef server to configure itse
 A `client` will have the level of permission to access data from the Chef server
 A `node` will get the list of recipies / cookbooks to be run
 
- 
+
 Consider a webserver `web1.awesomehost.com` , when it connects to chef-server to get all the recipies needed for `web1.awesomehost.com` it says "Hello Chef Server, I am client `web1.awesomehost.com` and here, I can authenticate to you, I need the `recipies` / `run-list` / `node-object` etc. for the `node` `web1.awesomehost.com` please pass them along.
