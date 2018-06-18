@@ -35,6 +35,8 @@ What is knife?
 | `knife search <query> -a <attribute name>`      | Seach for nodes with the attribute name |
 | `knife search 'os:windows AND name:*.awesomehost.com* AND !region:production' -a "my.attribute"`      | Seach with a query and attributes |
 | `knife winrm --winrm-user 'domain\username' 'hostname:host-001.awesomehost.com' 'net statistics server'`      | Knife `WINRM` example |
+| `knife winrm --winrm-user 'domain\username' 'hostname:host-001.awesomehost.com' 'schtasks.exe /QUERY /TN "chef-client"'`      | Knife `WINRM` example 2 |
+| `knife winrm --winrm-user 'domain\username' 'hostname:host-001.awesomehost.com' 'schtasks.exe /CHANGE /TN "chef-client" /DISABLE'`      | Knife `WINRM` example 3 |
 | `knife ssh 'hostname:host-002.awesomehost.com' 'hostname'`      | Knife SSH example 1  |
 | `knife ssh --ssh-password <plaintext> 'id:01 AND os:linux AND name:host-002.awesomehost.com' 'cat /proc/sys/vm/swappiness'`      | Knife SSH example 2 |
 | How to see multiple run-lists    | [Run-List for multiple nodes](#runlists) |
