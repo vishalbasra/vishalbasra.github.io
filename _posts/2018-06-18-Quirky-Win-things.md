@@ -23,3 +23,4 @@ excerpt: Some quirky albeit nice windows things!
 | `wmic product get /format:csv > Software_%Computername%.csv`     | Save all installed packages to a file  |
 | `wmic product  <insert pipe here> find "Chef Client"`      | Show details of a package  |
 | `wmic product get /format:csv <insert pipe here> find "Chef Client"`      | Show details of a package in CSV  |
+| `(Get-WmiObject Win32_ComputerSystem).Name + '.' + (Get-WmiObject Win32_ComputerSystem).Domain`      |  FQDN  |
