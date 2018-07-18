@@ -24,3 +24,4 @@ excerpt: Some quirky albeit nice windows things!
 | `wmic product  <insert pipe here> find "Chef Client"`      | Show details of a package  |
 | `wmic product get /format:csv <insert pipe here> find "Chef Client"`      | Show details of a package in CSV  |
 | `(Get-WmiObject Win32_ComputerSystem).Name + '.' + (Get-WmiObject Win32_ComputerSystem).Domain`      |  FQDN  |
+| `.ToLower() or .ToUpper()`      |  lower or UPPER case  |
