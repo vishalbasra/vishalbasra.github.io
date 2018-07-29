@@ -97,3 +97,21 @@ A `node` will get the list of recipies / cookbooks to be run
 
 
 Consider a webserver `web1.awesomehost.com` , when it connects to chef-server to get all the recipies needed for `web1.awesomehost.com` it says "Hello Chef Server, I am client `web1.awesomehost.com` and here, I can authenticate to you, I need the `recipies` / `run-list` / `node-object` etc. for the `node` `web1.awesomehost.com` please pass them along.
+
+## Change vagrant stuff in kitchen ##
+All right, this is not a knife thing, but you may ant to see **[this link](https://github.com/chef-cookbooks/jenkins/blob/f4ecce7152011d2252d7c34697be211315b51b3c/.kitchen.yml#L6-L11)** to set all sorts of stuff for Vagrant in your kitchen file.
+
+Here's extracted code from that page for reference 
+```
+driver:
+  name: vagrant
+  customize:
+    cpus: 2
+    memory: 1024
+  network:
+    # Allow access to the Jenkins webui which is useful when troubleshooting
+    - - forwarded_port
+      - guest: 8080
+        host: 9090
+auto_correct: true
+```
