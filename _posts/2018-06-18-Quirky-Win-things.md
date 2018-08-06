@@ -25,3 +25,5 @@ excerpt: Some quirky albeit nice windows things!
 | `wmic product get /format:csv <insert pipe here> find "Chef Client"`      | Show details of a package in CSV  |
 | `(Get-WmiObject Win32_ComputerSystem).Name + '.' + (Get-WmiObject Win32_ComputerSystem).Domain`      |  FQDN  |
 | `.ToLower() or .ToUpper()`      |  lower or UPPER case  |
+| `Get-Service "vishal*"`      |  Find and list status of all services containing the specified name as the ServiceName  |
+| `Start-Service -Name Vishal`      |  Starts the service where name matches the specified value use `-DisplayName` instead if you want  |
