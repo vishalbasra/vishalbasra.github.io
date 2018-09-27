@@ -56,6 +56,7 @@ What is knife?
 | `knife cookbook site <whatever options>`      | Cookbook options via/for the supermarket |
 | `knife search node 'name:awesomehost-01 AND virtualization_system:vmware`      | Search nested attributes within the actual search query |
 | `knife data bag from file idname.json --secret-file encrypted_data_bag_secret`      | Create databag or databag item from file and encrypt it |
+| `knife data create <databbag name> <item-name> --secret-file encrypted_data_bag_secret`      | Create databag or databag item using an editor and encrypt it |
 
 
 
@@ -101,7 +102,7 @@ Consider a webserver `web1.awesomehost.com` , when it connects to chef-server to
 ## Change vagrant stuff in kitchen ##
 All right, this is not a knife thing, but you may ant to see **[this link](https://github.com/chef-cookbooks/jenkins/blob/f4ecce7152011d2252d7c34697be211315b51b3c/.kitchen.yml#L6-L11)** to set all sorts of stuff for Vagrant in your kitchen file.
 
-Here's extracted code from that page for reference 
+Here's extracted code from that page for reference
 ```
 driver:
   name: vagrant
