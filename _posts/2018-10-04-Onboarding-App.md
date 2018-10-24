@@ -8,6 +8,7 @@ categories:
 
 tags:
   - Rambling
+  - Work
 
 excerpt: On boarding a new application or service at work
 ---
