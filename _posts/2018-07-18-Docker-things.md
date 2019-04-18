@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Docker"
+title:  "Docker Things"
 categories: Docker
 
 categories:
@@ -11,6 +11,7 @@ tags:
   - cmd
   - metadata
 
+permalink: /blog/:categories/:title/
 
 excerpt: Handy docker stuff
 ---
