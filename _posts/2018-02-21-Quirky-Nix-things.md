@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Quirky Nix things"
-categories: Linux
 
 categories:
   - Linux
@@ -12,6 +11,9 @@ tags:
 
 
 excerpt: Some quirky albeit nice nix things!
+excerpt_separator:  <!--more-->
+
+permalink: /:categories/:title/
 ---
 | Quirky thing        | Explanation  |
 | ------------- |:-------------:|

@@ -1,17 +1,20 @@
 ---
 layout: post
 title:  "PostgreSQL"
-categories: DB
 
 categories:
-  - DB
+  - data-tier
 
 tags:
   - DB
+  - Data Tier
   - cmd
 
 
 excerpt: Some quirky albeit nice things to copy paste to psql cli
+excerpt_separator:  <!--more-->
+
+permalink: /:categories/:title/
 ---
 
 | Quirky thing        | Explanation  |

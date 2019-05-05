@@ -250,6 +250,23 @@ tbody tr:nth-child(odd) th {
   background-color: #f9f9f9;
 }
 
+.iconbarleft {
+  float: left;
+  max-width: 38rem;
+  font-size: 1.5rem;
+  display: inline-block;
+  margin: 0 0.25em;
+
+
+}
+
+.iconbarright {
+  float: right;
+  overflow: visible;
+
+
+}
+
 
 /*
  * Container

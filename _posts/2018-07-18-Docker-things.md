@@ -1,19 +1,20 @@
 ---
 layout: post
 title:  "Docker Things"
-categories: Docker
 
 categories:
-  - Docker
+  - containers
 
 tags:
   - Docker
+  - containers
   - cmd
   - metadata
 
-permalink: /blog/:categories/:title/
-
 excerpt: Handy docker stuff
+excerpt_separator:  <!--more-->
+
+permalink: /:categories/:title/
 ---
 
 | Quirky thing        | Explanation  |

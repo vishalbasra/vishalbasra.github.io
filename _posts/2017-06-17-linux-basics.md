@@ -11,12 +11,12 @@ tags:
   - Linux
   - bash
 
-permalink: /blog/:categories/:title/
+permalink: /:categories/:title/
 ---
-
 Hello world, foo-bar!
 
 This is my first post, enter obligatory hello world.
+
 But the idea of writing a lame ass post would just be awkward, which is what I perceived.
 <center>So,</center>
 I came up with the idea to seggregate the website into categories and the first one that came to my mind, was of-course Nix.
@@ -33,7 +33,8 @@ Since i couldn't think of anything better to do, here's what this does, SSH's in
 
 Here goes nothing
 
-{% highlight bash %}
+<div align="left">
+<pre><code>
 #!/bin/sh
 
 function remote_shell {
@@ -69,5 +70,6 @@ remote_shell $1 $2 rsyslog /sbin/rsyslogd Rsyslog /opt/somefolder/ssh_keys/myuse
 #    $5 log file name
 #    $6 path to SSH key
 #    $7 location within /var/log directory where the script should log
-
-{% endhighlight %}
+</code>
+</pre>
+</div>

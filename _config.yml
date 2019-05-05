@@ -7,8 +7,6 @@ highlighter: rouge
 permalink:        pretty
 
 
-
-
 # Setup
 title:            white-turtle
 tagline:          'turtles and code!'
@@ -26,8 +24,10 @@ plugins:
   - jekyll-gist
   - jekyll-paginate
 
+
+
 # Custom vars
-sidebar_home_link:  true
+#sidebar_home_link:  true
 github:
   address: https://github.com/vishalbasra
 
