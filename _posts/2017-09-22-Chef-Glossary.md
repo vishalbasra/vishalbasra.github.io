@@ -1,23 +1,25 @@
 ---
 layout: post
-title:  "Chef Glosarry"
-categories: Chef
+title:  "Chef Glossary"
 
 categories:
-  - Chef
+  - configuration-management
 tags:
   - Chef
   - Configuration Management
   - Glossary
 
 excerpt: Commonly used terms / glossary for Chef
+excerpt_separator:  <!--more-->
+
+permalink: /:categories/:title/
 ---
 
 The idea of this page is to be a glossary of sorts for Chef related things!
 
 # Things to know
 
-**Common Chef things to know**
+<b>Common Chef things to know<b>
 
 | Command        | Explanation  |
 | ------------- |:-------------:|

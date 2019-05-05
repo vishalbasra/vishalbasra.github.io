@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Quirky AWS things"
-categories: AWS
 
 categories:
   - AWS
@@ -13,6 +12,9 @@ tags:
 
 
 excerpt: Some quirky albeit nice AWS things!
+excerpt_separator:  <!--more-->
+
+permalink: /:categories/:title/
 ---
 
 | Quirky thing        | Explanation  |

@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Interact with Route 53"
-categories: DNS
 
 categories:
   - DNS
@@ -12,19 +11,22 @@ tags:
   - AWS
 
 excerpt: A short guide to interact with Route 53
+excerpt_separator:  <!--more-->
+
+permalink: /:categories/:title/
 ---
 
 # Route 53
 
 You've seen this everywhere, and perhaps you use it too! Maybe you've just recently adopted or looking to adapt to [Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html).
 
-The idea of me writing this article is to show one of the many (10,000) methods how to interact with Route 53 to 
+The idea of me writing this article is to show one of the many (10,000) methods how to interact with Route 53 to
 
 - add records
 - update records
 - delete records
 
-in **Route 53**
+in <b>Route 53<b>
 
 
 To achieve this, I'll be leveraging something called [AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
@@ -47,7 +49,7 @@ Primarily, we'll be using the [change-resource-record-sets](https://docs.aws.ama
 
 
 
-So here's what your use case looks like 
+So here's what your use case looks like
 1. Lambda function is hit by an API with certain parameters
 2. Lambda function wil process and hit Route 53's API(via Boto 3)
 3. Lambda function will return a response to us
@@ -67,4 +69,3 @@ So here's what your use case looks like
 3. Create a lambda function with the code from above (modify if needed , better yet [create a pull request!](https://help.github.com/articles/creating-a-pull-request/))
 3. Create an API gateway endpoint - be considerate about security, access and controls.
 4. Fire away to your api endpoint with an appropriate input from above!
-

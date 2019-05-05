@@ -1,10 +1,9 @@
 ---
 layout: post
 title:  "Quirky Win things"
-categories: LinWindowsux
 
 categories:
-  - Windows
+  - windows
 
 tags:
   - Windows
@@ -12,6 +11,9 @@ tags:
 
 
 excerpt: Some quirky albeit nice windows things!
+excerpt_separator:  <!--more-->
+
+permalink: /:categories/:title/
 ---
 
 | Quirky thing        | Explanation  |

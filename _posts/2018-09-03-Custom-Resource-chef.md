@@ -1,10 +1,9 @@
 ---
 layout: post
 title:  "Chef Custom resource"
-categories: Chef
 
 categories:
-  - Chef
+  - configuration-management
 
 tags:
   - Chef
@@ -16,7 +15,7 @@ tags:
 excerpt: Example of a custom chef resource
 ---
 
-**Read data from a file on disk to process**
+<b>Read data from a file on disk to process<b>
 
 > I know this example is an overkill, this is just to demonstrate
 

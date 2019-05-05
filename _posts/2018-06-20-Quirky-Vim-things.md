@@ -1,18 +1,21 @@
 ---
 layout: post
 title:  "Quirky VIM things"
-categories: Vim
 
 categories:
-  - Vim
+  - Linux
 
 tags:
   - Vim
   - Editor
   - Macos
+  - Linux
 
 
 excerpt: Vim on macos!
+excerpt_separator:  <!--more-->
+
+permalink: /:categories/:title/
 ---
 
 ```

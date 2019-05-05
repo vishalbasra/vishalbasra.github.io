@@ -9,33 +9,32 @@
   <div class="tags-list">
     {% for tag_pair in tag_words %}
     {% assign tag = tag_pair | split:'|' | last %}
-    <a href="#{{ tag | slugify }}" class="tag-link">
+    <a href="#{{ tag | slugify }}" class="btn">
       <span class="tag-name">{{ tag }}</span>
       <span class="tag-count">{{ site.tags[tag] | size }}</span>
     </a>
     {% endfor %}
   </div>
+</div>
 
-  <hr/>
+<hr/>
 
-  <div class="posts-by-tag">
-    {% for tag_pair in tag_words %}
-    {% assign tag = tag_pair | split:'|' | last %}
-    <div id="{{ tag | slugify }}" class="posts-for-tag">
-      <h2>{{ tag }}</h2>
-      <ul class="posts-list">
-        {% for post in site.tags[tag] %}
-          <li>
-            <h3>
-              <a href="{{ site.baseurl }}{{ post.url }}">
-                {{ post.title }}
-                <small>{{ post.date | date_to_string }}</small>
-              </a>
-            </h3>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-    {% endfor %}
+<div class="posts-by-tag">
+  {% for tag_pair in tag_words %}
+  {% assign tag = tag_pair | split:'|' | last %}
+  <div id="{{ tag | slugify }}" class="posts-for-tag">
+    <h1>{{ tag }}</h1>
+    <ul class="posts-list">
+      {% for post in site.tags[tag] %}
+        <li>
+          <h4>
+            <a href="{{ site.baseurl }}{{ post.url }}">
+              {{ post.title }}
+            </a>
+          </h4>
+        </li>
+      {% endfor %}
+    </ul>
   </div>
+  {% endfor %}
 </div>
