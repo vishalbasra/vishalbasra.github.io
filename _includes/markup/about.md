@@ -26,7 +26,7 @@ img{
 
 <div class="row">
   <div class="column">
-    <img src="/public/images/me.jpg" alt="Snow" style="width:100%" >
+    <img src="/public/images/me.jpg" alt="Aegon Targeryan" style="width:100%" >
   </div>
 
     <p>
