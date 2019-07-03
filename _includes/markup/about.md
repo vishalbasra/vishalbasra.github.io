@@ -30,9 +30,9 @@ img{
   </div>
 
     <p>
-    My name's Vishal and here, I hope to compile and put out things that I find interesting, hoping that other people might find them interesting too!
+    My name's Vishal and here I just ramble and blabber about  things that I find interesting!
     <br>
-    I play video-games and work as a <a href="https://en.wikipedia.org/wiki/Site_Reliability_Engineering">SRE</a> <br>
+    I play video-games, read fiction and work as a <a href="https://en.wikipedia.org/wiki/Site_Reliability_Engineering">SRE</a> <br>
 
     Why turtles?
     <br>
