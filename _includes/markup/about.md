@@ -26,7 +26,7 @@ img{
 
 <div class="row">
   <div class="column">
-    <img src="/public/images/me.jpg" alt="Aegon Targeryan" style="width:100%" >
+    <a href="{{ site.baseurl }}/about"><img src="/public/images/me.jpg" alt="Aegon Targeryan" style="width:100%" ></a>
   </div>
 
     <p>
