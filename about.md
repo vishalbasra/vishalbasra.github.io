@@ -3,5 +3,4 @@ layout: page
 title: About
 ---
 {% include markup/about.md %}
-<br>
-<p style="text-align:center;"> My resume is </p><a href=https://white-turtle.org/resume/>here</a>
+<br><p>See my resume here</p><a href="{{ site.baseurl }}/resume">here</a>
