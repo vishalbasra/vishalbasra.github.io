@@ -1,6 +1,6 @@
  knife exec -E "Chef::ServerAPI.new(Chef::Config[:chef_server_url]).get('cookbooks/linux-base/_latest')"
 
-rabbitmq API
+rabbitmq API test
 
 git squash
 
