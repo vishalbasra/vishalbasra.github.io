@@ -40,7 +40,7 @@ mark {
 | `knife node show -l -F json <nodename>`      | Show the all details, including Attributes in JSON |
 | `knife node edit <nodename>`      | Edit the node9object) - edit the runlist |
 | `knife search node 'recipes:cookbook_name\:\:recipe_name'`      | Show nodes which have the `recipe` of the `cookbook` attached |
-| `knife search node 'cookbooks:cookbook-name`      | Show nodes which have the `cookbook` in the run list or if it is a dependency |
+| `knife search node 'cookbooks:cookbook-name'`      | Show nodes which have the `cookbook` in the run list or if it is a dependency |
 | `knife search node 'key:value AND NOT rabbitmq_version:bla' -a rabbitmq.version`      | Search for a value with not in the search itself |
 | `knife search <query> -a <attribute name>`      | Seach for nodes with the attribute name |
 | `knife search 'os:windows AND name:*.awesomehost.com* AND !region:production' -a "my.attribute"`      | Seach with a query and attributes |
